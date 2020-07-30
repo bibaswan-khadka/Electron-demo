@@ -1,4 +1,4 @@
-# Electron-demo
+# Electron-starter-pack
 This is a extended starterpack that includes Electron support so that you can deploy your webapps as desktop applications. To use the starterpack to make desktop applications.  
 
 1. First clone it.  
