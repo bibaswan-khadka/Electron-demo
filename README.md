@@ -7,7 +7,7 @@ This is a extended starterpack that includes Electron support so that you can de
 4. Then call `yarn package-mac` or `yarn package-win`. This starterpack was created on mac so windows users might need to change some bash commands to their windows equivalents. It is recommended for windows users to make the electron starterpack using their own already existing starterpacks with the instructions below to prevent these issues. 
 5. After calling the package command you will see a folder called release builds. That is where you will find your packaged app. Navigate to the app using the file manager and open it to use. 
 
-## Instructions for adding electron support to your already existing starterpack 
+## Instructions for adding electron support to your already existing starterpack or webapp
 
 1. First clone your starterpack to your terminal from github. 
 2. Call `yarn install` to install packages. 
