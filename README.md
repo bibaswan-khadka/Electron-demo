@@ -48,7 +48,7 @@ app.on('activate', () => {
   }
 });
 ```  
-This code is preety simple. See the video for more explanation. The code first imports electron, isDev detection and other   necessary things. We then create a mainWindow variable. We then create a function createWindow() to create our desktop app window. We then tell the window what to load. When in dev mode we load the localhost but when in production we load from the dist folder. The next two functions quit the app and create the winodw when the app is first opened.    
+**(Code adapted from Citation 3)** This code is preety simple. See the video for more explanation. The code first imports electron, isDev detection and other   necessary things. We then create a mainWindow variable. We then create a function createWindow() to create our desktop app window. We then tell the window what to load. When in dev mode we load the localhost but when in production we load from the dist folder. The next two functions quit the app and create the winodw when the app is first opened.    
 
 8. Now we need to make some changes to our package.json. Open up package.json and replace what was previously in main with `"main": "public/electron.js",` By doing this we are telling the computer to open up electron.js instead of the previous file on runtime.  
 9. Now lets add a command to run development mode. Go to scripts and add ` "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:8080 && electron .\"", ` . This command will first open up your app on localhost, then wait and when that is finished it will open up the app in your electron window. In dev mode any changes you make in the local host will appear in the electron window as well. You can also debug straight in electron by opening up the dev tools in the electron tools by scrolling up to view and toggle developer tools.   
@@ -69,4 +69,12 @@ These commands will add packaging support for mac, windows and linux. Amazing hu
 17. Then call `yarn package-mac` or the respective command for your system.  
 18. And just like that you have created your desktop app. You can find the app in the release builds folder. Navigate to it using your file explorer and open up your desktop app.  
 19. You can use these same steps to package any one of your webapps as a desktop app.  
-20. **(Optional)** Electron apps especially small ones can be quite large in size. So it is recommended that you create an installer to reduce the size for distribution. On mac you can add a plugin called dmg installer using `yarn add global electron-installer-dmg` that will take you app and create an installer that will install the app for you. To use it call `electron-installer-dmg <PathToApp> <Nameofinstaller>`
+20. **(Optional)** Electron apps especially small ones can be quite large in size. So it is recommended that you create an installer to reduce the size for distribution. On mac you can add a plugin called dmg installer using `yarn add global electron-installer-dmg` that will take you app and create an installer that will install the app for you. To use it call `electron-installer-dmg <PathToApp> <Nameofinstaller>`. 
+
+## Citations 
+Citations- 
+1. https://www.electronjs.org/docs/tutorial/first-app
+2. https://www.youtube.com/watch?v=kN1Czs0m1SU
+3. https://medium.com/@kitze/%EF%B8%8F-from-react-to-an-electron-app-ready-for-production-a0468ecb1da3
+4. https://www.christianengvall.se/electron-packager-tutorial/
+
