@@ -68,4 +68,5 @@ These commands will add packaging support for mac, windows and linux. Amazing hu
 16.  Now lets package the app. First call `yarn build`. This will create the dist folder, from which we will package up the files. 
 17. Then call `yarn package-mac` or the respective command for your system.  
 18. And just like that you have created your desktop app. You can find the app in the release builds folder. Navigate to it using your file explorer and open up your desktop app.  
-19. You can use these same steps to package any one of your webapps as a desktop app. 
+19. You can use these same steps to package any one of your webapps as a desktop app.  
+20. **(Optional)** Electron apps especially small ones can be quite large in size. So it is recommended that you create an installer to reduce the size for distribution. On mac you can add a plugin called dmg installer using `yarn add global electron-installer-dmg` that will take you app and create an installer that will install the app for you. To use it call `electron-installer-dmg <PathToApp> <Nameofinstaller>`
